@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lê Đinh Tú Nguyên - Portfolio</title>
+<style>
+/* Reset mặc định */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fce4ec; /* Màu hồng pastel nhẹ cho nền trang */
+}
+
+/* Biến màu */
+:root {
+    --primary-pink: #ec407a; /* Hồng đậm cho tiêu đề chính */
+    --secondary-pink: #f48fb1; /* Hồng trung bình cho nút, highlight */
+    --bg-pink: #fff1f5; /* Hồng siêu nhạt cho nền các phần */
+    --text-color: #4a4a4a;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.profile-info h1 {
+    font-size: 36px;
+    color: var(--primary-pink);
+    font-weight: 700;
+}
+
+.profile-info h2 {
+    font-size: 18px;
+    color: var(--secondary-pink);
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 14px;
+    color: #666;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--secondary-pink);
+}
+
+/* Sections chính */
+section {
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+h2.section-title {
+    font-size: 24px;
+    color: var(--primary-pink);
+    border-bottom: 3px solid var(--secondary-pink);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* Key Highlights */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.highlight-item {
+    background: var(--bg-pink);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-pink);
+}
+
+.highlight-item h3 {
+    font-size: 32px;
+    color: var(--primary-pink);
+}
+
+.highlight-item p {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* Summary */
+.summary-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-btn {
+    background: #eee;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.toggle-btn.active {
+    background: var(--secondary-pink);
+    color: white;
+}
+
+.summary-content p {
+    display: none;
+    font-size: 16px;
+}
+
+.summary-content p.active {
+    display: block;
+}
+
+/* Competencies */
+.competencies-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.competency-tag {
+    background: var(--bg-pink);
+    color: var(--primary-pink);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Experience */
+.job {
+    margin-bottom: 30px;
+}
+
+.job-header {
+    margin-bottom: 15px;
+}
+
+.job-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.company-name {
+    color: var(--secondary-pink);
+    font-weight: 600;
+}
+
+.duration-scope {
+    font-size: 14px;
+    color: #777;
+    font-style: italic;
+}
+
+.job-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.job-details li {
+    margin-bottom: 5px;
+}
+
+/* Education */
+.edu-item {
+    margin-bottom: 15px;
+}
+
+.edu-title {
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-photo {
+        margin-top: 20px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="profile-info">
+            <h1>LÊ ĐINH TÚ NGUYÊN</h1>
+            <h2>Senior Communications Specialist & Marketing Lead</h2>
+            <div class="contact-info">
+                <p>📞 0904 551 748</p>
+                <p>✉️ ledtnguyen98@gmail.com</p>
+                <p>📍 Ho Chi Minh City, Vietnam</p>
+                <p><b>Chuyên môn:</b> PR & Brand Strategy | KOL/KOC | Social Media | Mỹ phẩm</p>
+            </div>
+        </div>
+        <img src="E-35.jpg" alt="Lê Đinh Tú Nguyên" class="profile-photo">
+    </header>
+
+    <section id="highlights">
+        <h2 class="section-title">THÀNH TỰU NỔI BẬT</h2>
+        <div class="highlights-grid">
+            <div class="highlight-item">
+                <h3>5+ Năm</h3>
+                <p>Kinh nghiệm<br>Marketing & PR</p>
+            </div>
+            <div class="highlight-item">
+                <h3>60+ / Tháng</h3>
+                <p>Sản xuất<br>Video ngắn</p>
+            </div>
+            <div class="highlight-item">
+                <h3>360°</h3>
+                <p>Chiến dịch<br>Media & PR</p>
+            </div>
+            <div class="highlight-item">
+                <h3>300+</h3>
+                <p>Điều phối<br>KOL, Báo chí</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="summary">
+        <h2 class="section-title">GIỚI THIỆU BẢN THÂN</h2>
+        <div class="summary-toggle">
+            <button class="toggle-btn active" onclick="showSummary('vi')">Tiếng Việt</button>
+            <button class="toggle-btn" onclick="showSummary('en')">English</button>
+        </div>
+        <div class="summary-content">
+            <p id="summary-vi" class="active">Chuyên viên Truyền thông & Marketing Cao cấp với hơn 5 năm kinh nghiệm trong chiến lược thương hiệu, truyền thông tích hợp và ngành mỹ phẩm. Thế mạnh vượt trội trong quản lý chiến dịch KOL/KOC, sản xuất video ngắn thu hút, tổ chức sự kiện kích hoạt bán lẻ và tối ưu phễu chuyển đổi về cửa hàng chính hãng Lazada.</p>
+            <p id="summary-en">Dynamic Senior PR & Marketing Specialist with 5+ years of experience in brand strategy, integrated communications, and cosmetics marketing. Skilled in managing end-to-end KOL/KOC campaigns, producing high-impact short-form video content, organizing multi-branch retail activations, and driving qualified traffic directly to official Lazada brand outlets.</p>
+        </div>
+    </section>
+
+    <section id="competencies">
+        <h2 class="section-title">NĂNG LỰC CỐT LÕI</h2>
+        <div class="competencies-list">
+            <span class="competency-tag">Media & Stakeholder Relations</span>
+            <span class="competency-tag">Quan hệ Báo chí & Đối tác</span>
+            <span class="competency-tag">Strategic Communication & PR</span>
+            <span class="competency-tag">Chiến lược Truyền thông</span>
+            <span class="competency-tag">Influencer & KOL/KOC Booking</span>
+            <span class="competency-tag">Điều phối KOL/KOC</span>
+            <span class="competency-tag">Short-form Video & Content</span>
+            <span class="competency-tag">Nội dung Video Ngắn</span>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">KINH NGHIỆM LÀM VIỆC</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <p class="job-title">1. Marketing Lead — <span class="company-name">Mịn Màng Việt Nam</span> (Cosmetics)</p>
+                <p class="duration-scope">05/2025 – 06/2026 | Scope: Brand Strategy, Video Production, Retail Activation & Lazada Funnel</p>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Xây dựng và thực thi chiến lược Marketing thương hiệu mỹ phẩm tổng thể, quản lý phân bổ ngân sách và dòng tiền tối ưu hóa ROI.</li>
+                    <li>Điều hành sản xuất 60+ video ngắn/tháng trên TikTok & Mạng xã hội, định hướng nội dung và giữ vững nhận diện thương hiệu.</li>
+                    <li>Tổ chức các sự kiện kích hoạt bán lẻ (Activation) tại điểm bán.</li>
+                    <li>Theo dõi sát sao KPIs, liên tục thử nghiệm và tối ưu hóa nội dung để gia tăng tỷ lệ tương tác và chuyển đổi đơn hàng.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <p class="job-title">2. Senior Communications Specialist — <span class="company-name">Gilaa Cosmetics</span></p>
+                <p class="duration-scope">10/2023 – 05/2025 | Scope: Integrated PR, Multi-channel Content & KOL/KOC Network</p>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Lập kế hoạch và chủ trì thực thi các chiến dịch PR - Truyền thông tích hợp 360° gia tăng uy tín thương hiệu và ra mắt các dòng sản phẩm mới.</li>
+                    <li>Phát triển chiến lược nội dung & hình ảnh đa kênh (Báo chí, MXH, Digital Ads) tiếp cận chính xác tệp khách hàng tiềm năng.</li>
+                    <li>Xây dựng và duy trì mạng lưới quan hệ chiến lược với báo chí truyền thông, Beauty KOLs & KOCs hàng đầu.</li>
+                    <li>Đo lường, phân tích và báo cáo hiệu quả chiến dịch trên các kênh Earned, Owned và Influencer Media.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <p class="job-title">3. Marketing Executive — <span class="company-name">Pharmacity</span></p>
+                <p class="duration-scope">01/2020 – 10/2023 | Scope: Retail Brand Building, Market Research & Media Booking</p>
+            </div>
+            <div class="job-details">
+                <ul>
+                    <li>Triển khai các chiến dịch xây dựng thương hiệu và chương trình khuyến mãi toàn quốc cho chuỗi bán lẻ dược phẩm.</li>
+                    <li>Nghiên cứu thị trường và đối thủ cạnh tranh nhằm cung cấp dữ liệu định hướng chiến lược nội dung.</li>
+                    <li>Quản lý các trang MXH (Facebook, Instagram) và điều phối công tác booking báo chí, KOLs/KOCs cho chiến dịch lớn.</li>
+                    <li>Gia tăng niềm tin thương hiệu qua các bài viết PR giáo dục sức khỏe và chương trình kích cầu mua sắm.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">HỌC VẤN & CHỨNG CHỈ</h2>
+        <div class="edu-item">
+            <p class="edu-title">Bachelor of Commercial English (Cử nhân Tiếng Anh Thương mại)</p>
+            <p>Ho Chi Minh City University of Foreign Languages and Information Technology (HUFLIT)</p>
+            <p class="duration-scope">2016 – 2020</p>
+        </div>
+        <div class="edu-item">
+            <p class="edu-title">3C Marketing Certificate (Creative - Copywriting - Content)</p>
+            <p>Tomorrow Marketer Academy</p>
+            <p class="duration-scope">08/2020</p>
+        </div>
+    </section>
+</div>
+
+<script>
+function showSummary(lang) {
+    // Ẩn tất cả nội dung summary
+    document.getElementById('summary-vi').classList.remove('active');
+    document.getElementById('summary-en').classList.remove('active');
+    
+    // Hiển thị nội dung tương ứng
+    document.getElementById('summary-' + lang).classList.add('active');
+    
+    // Đổi trạng thái active của nút
+    let buttons = document.querySelectorAll('.toggle-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    
+    if (lang === 'vi') {
+        buttons[0].classList.add('active');
+    } else {
+        buttons[1].classList.add('active');
+    }
+}
+</script>
+
+</body>
+</html>
